@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rapid Airways.com</title>
+    <style>
+        /* Style the dropdown button */
+        .dropdown-btn {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+    
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+    
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+        }
+    
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -52,21 +81,29 @@
 
 <h2>Destinasjoner</h2>
 
-<form action="submit.php" method="post">
-<label for="Destinasjon">Til</label>
-<select name="Destinasjon" id="Destinasjon"></select>
-<option value="Flesland">Flesland</option>
-<option value="Gardermoen">Gardermoen</option>
-<option value="Værnes">Værnes</option>
-<option value="Langnes">Langnes</option>
-<option value="Sola">Sola</option>
-<option value="Kjevik">Kjevik</option>
-<input type="submit" value="Send inn">
-</form>
+<div class="dropdown">
+    <button class="dropdown-btn">Til</button>
+    <div class="dropdown-content">
+        <a href="#">Flesland</a>
+        <a href="#">Gardermoen</a>
+        <a href="#">Værnes</a>
+        <a href="#">Sola</a>
+        <a href="#">Kjevik</a>
+        <a href="#">Langnes</a>
+    </div>
+</div>
 
-
-
-
+<div class="dropdown">
+    <button class="dropdown-btn">Fra</button>
+    <div class="dropdown-content">
+        <a href="#">Flesland</a>
+        <a href="#">Gardermoen</a>
+        <a href="#">Værnes</a>
+        <a href="#">Sola</a>
+        <a href="#">Kjevik</a>
+        <a href="#">Langnes</a>
+    </div>
+</div>
 
 
 
